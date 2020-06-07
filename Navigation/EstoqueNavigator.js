@@ -25,11 +25,12 @@ const Navigation = createStackNavigator({
     Editar: EditarProduto,
     Item: ProdutoItem,
     Exibir: ExibirProduto
-}, { defaultNavigationOptions: {
-        headerStyle: {
-        backGroundColor: Platform.OS === 'android' ? Cores.primary : ''
-    },
-    headerTintColor: Platform.OS === 'android' ? Cores.primary : Cores.primary
+}, { 
+    defaultNavigationOptions:{
+        headerStyle:{
+            backgroundColor:Platform.OS ==='android'?Cores.second:''
+        },
+        headerTintColor: Platform.OS ==='android'?'black':'Cores.primary'
     }
 });
 

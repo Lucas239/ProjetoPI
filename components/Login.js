@@ -21,7 +21,7 @@ if(!firebase.apps.length)
 		setPassword(password);
 	}
 	if(isAuthenticated === true){
-		props.navigation.navigate('ExibirProduto');
+		props.navigation.navigate('Home');
 	}
 	const login = async() =>{
 		if (email.length < 4) {

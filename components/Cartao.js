@@ -14,17 +14,17 @@ export const Cartao = (props) => {
 };
 
 const estilos = StyleSheet.create({
-    cartao: {
-        shadowColor: Cores.black,
-        shadowOffset: {
-            width: Medidas.width0,
-            height: Medidas.height2
-        },
-        shadowRadius: Medidas.shadowRadius6,
-        shadowOpacity: Medidas.opacity,
-        backgroundColor: Cores.white,
-        elevation: Medidas.elevation,
-        padding: Medidas.padding12,
-        borderRadius: Medidas.borderRadius
+    cartao:{
+        shadowColor:Cores.shadowCartao,
+            shadowOffset:{
+                width:0,
+                height:2
+            },
+        shadowRadius:6,
+        shadowOpacity:0.32,
+        backgroundColor:'white',
+        elevation:4,
+        padding:15,
+        borderRadius:15
     }
 });

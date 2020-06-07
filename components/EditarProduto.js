@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import {View, TextInput, Button, StyleSheet, Platform, Image} from 'react-native';
+import {View, TextInput, Button, StyleSheet, Platform, Image, Text} from 'react-native';
 import Cores from '../Cores/Cores';
 import Medidas from '../Medidas/Medidas';
 import { withNavigation } from 'react-navigation';
@@ -45,7 +45,7 @@ const EditarProduto = (props) => {
 
     return (
         <View>
-            <Image style={styles.imagem} source={{ uri: props.imagem }} />
+            <Image style={styles.imagem} source={{ uri: props.imagem }}/>
             <TextInput placeholder="Nome" value={nome} onChangeText={mudouNome}/>
             <TextInput placeholder="Preço" value={preco.toString()} onChangeText={mudouPreco} keyboardType={'numeric'}/>
             <TextInput placeholder="Unidade" value={unidade.toString()} onChangeText={mudouUnidade} keyboardType={'numeric'}/>

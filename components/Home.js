@@ -91,7 +91,7 @@ const Home = ({navigation}) => {
     <View style={styles.container}>
       {modoAdd == false && modoEdit == false && modoView == false &&
         <View>
-          <Text style={styles.title}>Lista de produtos</Text>
+          <Text style={styles.title}>               Lista de produtos</Text>
           {lista_produtos && lista_produtos.length > 0? 
             <FlatList
               data={lista_produtos}
@@ -113,7 +113,7 @@ const Home = ({navigation}) => {
             :
             null
           }
-          <Button title="Adicionar produto" color={Cores.primary} onPress={() => {handleAddClick()}} />
+          <Button style={styles.botao} title="Adicionar produto" color={Cores.primary} onPress={() => {handleAddClick()}} />
       </View>
       }
       {modoAdd == true &&
@@ -136,6 +136,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  botao: {
+    alignItems: 'center',
+    justifyContent: 'center',
+
+  },
   tableHeader: {
     fontWeight: 'bold',
     marginBottom: Medidas.margin10,
@@ -148,6 +153,7 @@ const styles = StyleSheet.create({
     marginTop: Medidas.margin15,
     display: 'flex',
     justifyContent: 'center',
+    alignItems: 'center',
     marginBottom: Medidas.margin6,
     width: Medidas.width100
   },

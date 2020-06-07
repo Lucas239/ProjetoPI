@@ -28,17 +28,18 @@ const ProdutoItem = (props) => {
     }
 
     return(
-        <TouchableOpacity onPress={() => props.onClick(props.id)} onLongPress={confirmaExclusao}>
-            <View style={styles.item}>
-                <Cartao estilos={styles.cartao}>
-                    <Image style={styles.imagem} source={{ uri: props.imagem }} />
-                    <Text>{props.nome}</Text>
-                    <Text>{props.preco}</Text>
-                    <Text>{props.unidade}</Text>
-                    <Text>{props.codigo}</Text>
+        <TouchableOpacity style={styles.item} onPress={() => props.onClick(props.id)} onLongPress={confirmaExclusao}>
+                    <Image 
+                        style={styles.imagem} 
+                        source={{ uri: props.imagem }} 
+                    />
+                    <Cartao estilos={styles.cartao}>
+                    <Text style={styles.nome}>Nome: {props.nome}</Text>
+                    <Text style={styles.numero}>Preço: R$ {props.preco}</Text>
+                    <Text style={styles.numero}>Unidade: {props.unidade}</Text>
+                    <Text style={styles.numero}>Codigo: {props.codigo}</Text>
 
                 </Cartao>
-            </View>
         </TouchableOpacity>
     );
 }
@@ -47,28 +48,35 @@ const ProdutoItem = (props) => {
 
 const styles = StyleSheet.create ({
     item: {
-        display: 'flex',
-        flexDirection: 'row', 
-        justifyContent: 'space-around',
-        marginBottom: Medidas.margin10,
-        marginTop: 10
+        flexDirection: 'row',
+        borderBottomColor: '#DDD',
+        borderBottomWidth: 1,
+        paddingVertical: 15,
+        paddingHorizontal: 30,
+        alignItems: 'center'
     },
     cartao: {
-        //300 pontos de largura
-        width: Medidas.width300,
-        maxWidth: Medidas.width100,
-        display: 'flex',
-        flexDirection: 'row', 
-        justifyContent: 'space-around',
-        textAlignVertical: 'center'
+        marginLeft: 25,
+        width: 250,
+        justifyContent: 'center',
+        alignItems: 'flex-start'
     },
     imagem: {
         width: 70,
-        height: 70,
-        borderRadius: 35,
-        backgroundColor: '#ccc',
+        height: 75,
+        borderRadius: 5,
+        backgroundColor: '#CCC',
         borderColor: Cores.primary,
         borderWidth: 1
+    },
+    nome: {
+        color: 'black',
+        fontSize: 18,
+       
+    },
+    numero: {
+        color: 'black',
+        fontSize: 16
     }
 });
 
