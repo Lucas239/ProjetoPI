@@ -103,7 +103,7 @@ const Home = ({navigation}) => {
                 preco={produto.item.preco}
                 unidade={produto.item.unidade}
                 codigo={produto.item.codigo}
-                imagem={produto.item.imagemURI}
+                imagem={produto.item.imagem}
                 onDelete={removerProduto}
                 onClick={exibir}
               />
@@ -120,10 +120,10 @@ const Home = ({navigation}) => {
         <ProdutoAdd salvar={handleSaveClick} voltar={handleBack}/>
       }
       {modoView ==true&&
-          <ExibirProduto id={produtoSelecionado.id} nome={produtoSelecionado.nome} preco={produtoSelecionado.preco} unidade={produtoSelecionado.unidade} codigo={produtoSelecionado.codigo} imagem={produtoSelecionado.imagemURI} voltar={handleBack} handleEdit={handleEditClick}/>
+          <ExibirProduto id={produtoSelecionado.id} nome={produtoSelecionado.nome} preco={produtoSelecionado.preco} unidade={produtoSelecionado.unidade} codigo={produtoSelecionado.codigo} imagem={produtoSelecionado.imagem} voltar={handleBack} handleEdit={handleEditClick}/>
       }
       {modoEdit == true &&
-        <EditarProduto id={produtoSelecionado.id} nome={produtoSelecionado.nome} preco={produtoSelecionado.preco} unidade={produtoSelecionado.unidade} codigo={produtoSelecionado.codigo} imagem={produtoSelecionado.imagemURI} voltar={handleBack} handleSaveClick={handleSaveEdit} />
+        <EditarProduto id={produtoSelecionado.id} nome={produtoSelecionado.nome} preco={produtoSelecionado.preco} unidade={produtoSelecionado.unidade} codigo={produtoSelecionado.codigo} imagem={produtoSelecionado.imagem} voltar={handleBack} handleSaveClick={handleSaveEdit} />
       }
     </View>
   );
