@@ -91,7 +91,7 @@ const Home = ({navigation}) => {
     <View style={styles.container}>
       {modoAdd == false && modoEdit == false && modoView == false &&
         <View>
-          <Text style={styles.title}>               Lista de produtos</Text>
+          <Text style={styles.title}>Lista de produtos</Text>
           {lista_produtos && lista_produtos.length > 0? 
             <FlatList
               data={lista_produtos}
