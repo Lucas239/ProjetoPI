@@ -67,7 +67,8 @@ if(!firebase.apps.length)
 				/>
 				<TextInput
 					style={styles.input}
-					placeholder="Digite seu email"
+					secureTextEntry={true}
+					placeholder="Digite sua senha"
 					value={password}
 					onChangeText={capturarPassword}
 				/>
